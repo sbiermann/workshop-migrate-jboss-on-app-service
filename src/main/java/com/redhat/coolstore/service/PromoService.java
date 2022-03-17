@@ -7,17 +7,19 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 
 import com.redhat.coolstore.model.Promotion;
 import com.redhat.coolstore.model.ShoppingCart;
 import com.redhat.coolstore.model.ShoppingCartItem;
 
-import weblogic.i18n.logging.NonCatalogLogger;
+import java.util.logging.Logger;
 
 @ApplicationScoped
 public class PromoService implements Serializable {
 
-    private NonCatalogLogger log = new NonCatalogLogger(PromoService.class.getName());
+    @Inject
+    Logger log;
 
     private static final long serialVersionUID = 2088590587856645568L;
 
